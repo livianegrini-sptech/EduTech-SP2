@@ -8,7 +8,7 @@ body {
 }
 
 :root {
-  --tamanho-header: 80px;
+  --tamanho-header: 75px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
@@ -21,9 +21,13 @@ body {
   margin: auto;
 }
 
+.Titulo{
+  font-size: 85px;
+}
+
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  /* border-bottom: 2px solid #32b9cd; */
 }
 
 .header .container {
@@ -34,7 +38,7 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  color: #32b9cd;
 }
 
 .agora {
@@ -47,7 +51,7 @@ body {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
+  color: #32b9cd;
 }
 
 .titulo {
@@ -65,14 +69,16 @@ body {
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  /* background-image: url('../assets/imgs/FundoPrincipal.jpg'); */
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/imgs/FundoPrincipal.jpg');
   background-size: cover;
 }
 
 .banner .container {
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
+  flex-direction: column;
 }
 
 .banner .container p {
@@ -91,6 +97,7 @@ body {
 .social {
   background-color: #e5e5e5;
   display: flex;
+  height: 60vh;
 }
 
 .social .container {
@@ -114,14 +121,14 @@ body {
 
 .box {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #005C84;
   height: 150px;
   color: #fff;
   display: flex;
@@ -141,8 +148,10 @@ body {
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  /* background-image: url('../assets/imgs/FundoFormularios.jpg'); */
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/imgs/FundoFormularios.jpg');
   background-size: cover;
+  height: 89vh;
 }
 
 .login .container {
@@ -153,12 +162,12 @@ body {
 
 .card {
   width: 50%;
-  background-color: #e5e5e5;
-  border-radius: 10px;
+  background-color: black;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: palevioletred;
+  color: white;
   flex-direction: column;
   height: fit-content;
   padding: 20px 0;
@@ -214,7 +223,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #e6005a;
+  background-color: #005C84;
   width: 120px;
   height: 30px;
   align-self: center;
