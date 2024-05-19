@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AquaTech | Cadastro</title>
+  <title>EduTech | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
 
@@ -23,9 +23,6 @@
       <ul class="navbar">
         <li>
           <a href="index.html">Inicial</a>
-        </li>
-        <li>
-          <a href="simulador.html">Simulador</a>
         </li>
         <!-- <li>|</li> -->
         <li>
@@ -46,39 +43,42 @@
       </div>
     </div>
     <div class="container">
-      <div class="card card-cadastro">
-        <h2>Cadastre-se</h2>
-        <div class="formulario">
-          <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-          <div class="campo">
-            <!-- <span>Nome:</span> -->
-            <input id="nome_input" type="text" placeholder="Nome" />
+      <div class="conteudoFormulario">
+        <p>Cadastre-se</p>
+        <div class="card card-cadastro">
+          <div class="formulario">
+            <!--
+                           Para inserir mais um campo, copie uma das inputs abaixo.
+                           Assim que inserir vá para o script abaixo.
+                       -->
+            <div class="campo">
+              <!-- <span>Nome:</span> -->
+              <input id="nome_input" type="text" placeholder="Nome" />
+            </div>
+            <div class="campo">
+              <!-- <span>E-mail:</span> -->
+              <input id="email_input" type="text" placeholder="Email" />
+            </div>
+            <div class="campo">
+              <!-- <span>Senha:</span> -->
+              <input id="senha_input" type="password" placeholder="Senha" />
+            </div>
+            <div class="campo">
+              <!-- <span>Confirmação da Senha:</span> -->
+              <input id="confirmacao_senha_input" type="password" placeholder="Confirmar Senha" />
+            </div>
+            <button class="botao" onclick="cadastrar()">Cadastrar</button>
           </div>
-          <div class="campo">
-            <!-- <span>E-mail:</span> -->
-            <input id="email_input" type="text" placeholder="Email" />
+          <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif" />
           </div>
-          <div class="campo">
-            <!-- <span>Senha:</span> -->
-            <input id="senha_input" type="password" placeholder="Senha" />
-          </div>
-          <div class="campo">
-            <!-- <span>Confirmação da Senha:</span> -->
-            <input id="confirmacao_senha_input" type="password" placeholder="Confirmar Senha" />
-          </div>
-          <button class="botao" onclick="cadastrar()">Cadastrar</button>
-        </div>
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div>
 
-        <!-- Apagar td relacionado ao campo empresa -->
+          <!-- Apagar td relacionado ao campo empresa -->
 
-        <div id="div_erros_login"></div>
+          <div id="div_erros_login"></div>
+        </div>
       </div>
+
     </div>
   </div>
 
