@@ -284,7 +284,8 @@ body {
 }
 
 .formulario input {
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
+  border: #FFFFFF;
   /* text-align: center; */
   border-radius: 10px;
   margin: 0;
@@ -304,10 +305,43 @@ body {
 
 .campo {
   display: flex;
-  flex-direction: column;
   justify-content: start;
   padding: 5px 0;
+  font-family: "Julius Sans One", sans-serif;
+  justify-content: space-evenly;
 }
+
+.campo input{
+  width: 25px;
+  height: 25px;
+  background-color: #000000;
+}
+
+/* .campo input[type=checkbox]:before {
+  content: "";
+  display: block;
+  /* position: absolute; */
+  /* width: 25px;
+  height: 25px;
+  /* top: 0; */
+  /* left: 0; */
+  /* background-color: #2196F3;
+} */ */
+/* 
+.campo input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  /* position: absolute; */
+  /* top: 5px;
+  left: 9px;
+} */ */ */
 
 .botao {
   cursor: pointer;
@@ -468,30 +502,4 @@ input {
   background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
   background-size: cover;
   animation-iteration-count: infinite;
-}
-
-
-
-/* Home */
-
-@keyframes bell {
-  0% {
-    transform: rotate(25deg)
-  }
-
-  25% {
-    transform: rotate(-25deg)
-  }
-
-  50% {
-    transform: rotate(25deg)
-  }
-
-  75% {
-    transform: rotate(-25deg)
-  }
-
-  100% {
-    transform: rotate(25deg)
-  }
 }

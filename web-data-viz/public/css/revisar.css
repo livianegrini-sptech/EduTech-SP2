@@ -240,9 +240,9 @@ body {
 .login {
   height: var(--tamanho-login);
   /* background-image: url('../assets/imgs/FundoFormularios.jpg'); */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoFormularios.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoPrincipal.jpg');
   background-size: cover;
-  height: 89vh;
+  height: 200vh;
 }
 
 .login .container {
@@ -252,7 +252,7 @@ body {
 }
 
 .card {
-  width: 50%;
+  width: 70%;
   background-color: black;
   border-radius: 8px;
   display: flex;
@@ -260,8 +260,13 @@ body {
   justify-content: space-evenly;
   color: white;
   flex-direction: column;
-  height: fit-content;
+  height: 40%;
   padding: 20px 0;
+  margin-top: 30px;
+}
+
+.card p {
+  font-family: "Julius Sans One", sans-serif;
 }
 
 .card h2 {
@@ -470,28 +475,8 @@ input {
   animation-iteration-count: infinite;
 }
 
-
-
-/* Home */
-
-@keyframes bell {
-  0% {
-    transform: rotate(25deg)
-  }
-
-  25% {
-    transform: rotate(-25deg)
-  }
-
-  50% {
-    transform: rotate(25deg)
-  }
-
-  75% {
-    transform: rotate(-25deg)
-  }
-
-  100% {
-    transform: rotate(25deg)
-  }
+.cardsRevisao {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
