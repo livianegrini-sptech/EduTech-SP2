@@ -21,21 +21,21 @@
 
     <div class="header">
         <div class="container">
-          <h1 class="titulo">EduTech</h1>
-          <ul class="navbar">
-            <li>
-              <a href="index.html">Inicial</a>
-            </li>
-            <!-- <li>|</li> -->
-            <li>
-              <a href="login.html">Login</a>
-            </li>
-            <li class="agora">
-              <a href="#">Cadastro</a>
-            </li>
-          </ul>
+            <h1 class="titulo">EduTech</h1>
+            <ul class="navbar">
+                <li class="agora">
+                    <a href="home.html">Home</a>
+                </li>
+                <!-- <li>|</li> -->
+                <li>
+                    <a href="home.html">Praticar</a>
+                </li>
+                <li>
+                    <a href="home.html">Revisar</a>
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
 
     <div class="login">
         <div class="alerta_erro">
@@ -44,30 +44,29 @@
             </div>
         </div>
         <div class="container">
-            <div class="card card-login">
-                <h2>Login</h2>
+            <div class="card card-pratica">
+                <h2>Qual o comando para criar uma tabela?</h2>
                 <div class="formulario">
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
-                        <input id="email_input" type="checkbox" placeholder="Email">
+                        <input id="opcao1_input" type="radio" placeholder="Email">
                         <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
-                        <input id="email_input" type="checkbox" placeholder="Email">
-                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br> 
+                        <input id="opcao2_input" type="radio" placeholder="Email">
+                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
                             tipo-campo1, nome-campo2 tipo-campo2, <br>
                             ....... nome-campoN tipo-campoN );</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
-                        <input id="email_input" type="checkbox" placeholder="Email">
+                        <input id="opcao3_input" type="radio" placeholder="Email">
                         <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
                     </div>
-                   
-                    <button class="botao" onclick="entrar()">Enviar</button>
+                    <button class="botao_pratica" onclick="entrar()">Enviar</button>
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
@@ -91,4 +90,3 @@
 </body>
 
 </html>
-

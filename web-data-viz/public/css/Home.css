@@ -166,8 +166,11 @@ body {
     display: flex;
   }
   
-  .caixasMetricas p {
+  .caixasMetricas a{
     font-size: 25px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
   }
   
   .conteudoSobreNos {
