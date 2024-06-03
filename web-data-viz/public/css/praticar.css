@@ -341,17 +341,16 @@ body {
   left: 9px;
 } */ */ */
 
-.botao_pratica button {
+.formulario button {
   cursor: pointer;
   font-family: "Julius Sans One", sans-serif;
-  border: 0;
   border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
+  /* font-weight: 600; */
+  /* font-size: 18px; */
   color: #fff;
   background-color: #005C84;
-  width: 50px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   align-self: center;
   margin-top: 20px;
 }

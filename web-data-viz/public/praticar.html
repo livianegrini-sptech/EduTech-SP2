@@ -44,7 +44,24 @@
             </div>
         </div>
         <div class="container">
-            <div class="card card-pratica">
+            <div id="div_iniciar" class="card card-pratica">
+                <h2>Prática comandos DDL e DML</h2>
+                <div class="formulario">
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <p>Pronto para praticar seus conhecimentos?</p>
+                    </div>
+                    <button onclick="iniciar()">Inciar Quiz</button>
+                </div>
+
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login"></div>
+            </div>
+
+            <div id="div_perguntas" class="card card-pratica">
                 <h2>Qual o comando para criar uma tabela?</h2>
                 <div class="formulario">
                     <div class="campo">
@@ -66,7 +83,7 @@
                         <input id="opcao3_input" type="radio" placeholder="Email">
                         <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
                     </div>
-                    <button class="botao_pratica" onclick="entrar()">Enviar</button>
+                    <button onclick="entrar()">Enviar</button>
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
@@ -90,3 +107,38 @@
 </body>
 
 </html>
+
+<script>
+
+    div_perguntas.style.display = 'none';
+
+    var ListaPerguntas = ['Qual o comando para criar uma tabela?'];
+    var ListaRespostas = ['ALTER TABLE Aluno ADD COLUMN dtNasc DATE;', 'CREATE TABLE nome-da-tabela ( nome-campo1 <br>tipo-campo1, nome-campo2 tipo-campo2, <br>....... nome-campoN tipo-campoN );', 'ALTER TABLE Aluno ADD COLUMN dtNasc DATE;'];
+    var ListaRespostasCertas = [2];
+
+    function iniciar() {
+        div_iniciar.style.display = 'none';
+        div_perguntas.style.display = 'flex';
+    }
+
+    function praticar() {
+
+        // pegar valor de input tipo radio 
+        // https://pt.stackoverflow.com/questions/219949/pegar-o-valor-do-input-radio-com-javascript
+        // document.querySelector('input[name="q1"]:checked').value;
+
+        for (let index = 1; index <= 3; index++) {
+
+        }
+
+        var resposta
+
+        for (var index = 0; index < array.length; index++) {
+            if (resposta == ListaRespostasCertas[index]) {
+
+            }
+
+        }
+
+    }
+</script>

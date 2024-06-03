@@ -38,3 +38,5 @@ dataPratica DATE
 );
 
 SELECT * FROM usuario;
+
+
