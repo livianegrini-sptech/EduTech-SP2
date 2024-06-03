@@ -38,11 +38,6 @@
     </div>
 
     <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
         <div class="container">
             <div id="div_iniciar" class="card card-pratica">
                 <h2>Prática comandos DDL e DML</h2>
@@ -61,18 +56,20 @@
                 <div id="div_erros_login"></div>
             </div>
 
-            <div id="div_perguntas" class="card card-pratica">
-                <h2>Qual o comando para criar uma tabela?</h2>
-                <div class="formulario">
+            <!-- QUESTÃO 1 -->
+            <div id="div_questao1" class="card card-pratica">
+                <div id="questao1" class="formulario">
+                    <h2>Qual o comando para criar uma tabela?</h2>
+
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
-                        <input id="opcao1_input" type="radio" placeholder="Email">
+                        <input type="radio" name="resposta1">
                         <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
-                        <input id="opcao2_input" type="radio" placeholder="Email">
+                        <input id="correta1" type="radio" name="resposta1">
                         <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
                             tipo-campo1, nome-campo2 tipo-campo2, <br>
                             ....... nome-campoN tipo-campoN );</p>
@@ -80,20 +77,146 @@
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
-                        <input id="opcao3_input" type="radio" placeholder="Email">
+                        <input type="radio" name="resposta1">
                         <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
                     </div>
-                    <button onclick="entrar()">Enviar</button>
+                    <button onclick="responder1()">Responder</button>
                 </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login"></div>
             </div>
+
+
+            <!-- QUESTÃO 2 -->
+            <div id="div_questao2" class="card card-pratica">
+                <div id="questao2" class="formulario">
+                    <h2>QUESTÃO 2</h2>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input id="correta2" type="radio" name="resposta2">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta2">
+                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
+                            tipo-campo1, nome-campo2 tipo-campo2, <br>
+                            ....... nome-campoN tipo-campoN );</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta2">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+                    <button onclick="responder2()">Responder</button>
+                </div>
+            </div>
+
+
+            <!-- QUESTÃO 3 -->
+            <div id="div_questao3" class="card card-pratica">
+                <div id="questao3" class="formulario">
+                    <h2>
+                        QUESTÃO 3</h2>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta">
+                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
+                            tipo-campo1, nome-campo2 tipo-campo2, <br>
+                            ....... nome-campoN tipo-campoN );</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input id="correta3" type="radio" name="resposta">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+                    <button onclick="responder3()">Responder</button>
+                </div>
+            </div>
+
+
+            <!-- QUESTÃO 4 -->
+            <div id="div_questao4" class="card card-pratica">
+                <div id="questao4" class="formulario">
+                    <h2>
+                        QUESTÃO 4</h2>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input id="correta4" type="radio" name="resposta">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta">
+                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
+                            tipo-campo1, nome-campo2 tipo-campo2, <br>
+                            ....... nome-campoN tipo-campoN );</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+                    <button onclick="responder4()">Responder</button>
+                </div>
+            </div>
+
+
+            <!-- QUESTÃO 5 -->
+            <div id="div_questao5" class="card card-pratica">
+                <div id="questao5" class="formulario">
+                    <h2>
+                        QUESTÃO 5</h2>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input id="correta5" type="radio" name="resposta">
+                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
+                            tipo-campo1, nome-campo2 tipo-campo2, <br>
+                            ....... nome-campoN tipo-campoN );</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta">
+                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                    </div>
+                    <button onclick="responder5()">Responder</button>
+                </div>
+            </div>
+
+            <div id="div_finalizar" class="card card-pratica">
+                <h2>Finalizar Quiz?</h2>
+                <div class="formulario">
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <p>Pronto para saber seus pontos?</p>
+                    </div>
+                    <button onclick="finalizar()">Finalizar Quiz</button>
+                </div>
+            </div>
+
         </div>
     </div>
+
 
     <!--footer inicio-->
     <div class="footer">
@@ -110,35 +233,139 @@
 
 <script>
 
-    div_perguntas.style.display = 'none';
+    div_questao1.style.display = 'none';
+    div_questao2.style.display = 'none';
+    div_questao3.style.display = 'none';
+    div_questao4.style.display = 'none';
+    div_questao5.style.display = 'none';
+    div_finalizar.style.display = 'none';
 
-    var ListaPerguntas = ['Qual o comando para criar uma tabela?'];
-    var ListaRespostas = ['ALTER TABLE Aluno ADD COLUMN dtNasc DATE;', 'CREATE TABLE nome-da-tabela ( nome-campo1 <br>tipo-campo1, nome-campo2 tipo-campo2, <br>....... nome-campoN tipo-campoN );', 'ALTER TABLE Aluno ADD COLUMN dtNasc DATE;'];
-    var ListaRespostasCertas = [2];
+    // var ListaPerguntas = ['Qual o comando para criar uma tabela?'];
+    // var ListaRespostas = ['ALTER TABLE Aluno ADD COLUMN dtNasc DATE;', 'CREATE TABLE nome-da-tabela ( nome-campo1 <br>tipo-campo1, nome-campo2 tipo-campo2, <br>....... nome-campoN tipo-campoN );', 'ALTER TABLE Aluno ADD COLUMN dtNasc DATE;'];
+    // var ListaRespostasCertas = [2];
 
     function iniciar() {
         div_iniciar.style.display = 'none';
-        div_perguntas.style.display = 'flex';
+        div_questao1.style.display = 'flex';
+        div_questao2.style.display = 'none';
+        div_questao3.style.display = 'none';
+        div_questao4.style.display = 'none';
+        div_questao5.style.display = 'none';
+        div_finalizar.style.display = 'none';
     }
 
-    function praticar() {
+    function responder1() {
+        div_iniciar.style.display = 'none';
+        div_questao1.style.display = 'none';
+        div_questao2.style.display = 'flex';
+        div_questao3.style.display = 'none';
+        div_questao4.style.display = 'none';
+        div_questao5.style.display = 'none';
+        div_finalizar.style.display = 'none';
+    }
 
-        // pegar valor de input tipo radio 
-        // https://pt.stackoverflow.com/questions/219949/pegar-o-valor-do-input-radio-com-javascript
-        // document.querySelector('input[name="q1"]:checked').value;
+    function responder2() {
+        div_iniciar.style.display = 'none';
+        div_questao1.style.display = 'none';
+        div_questao2.style.display = 'none';
+        div_questao3.style.display = 'flex';
+        div_questao4.style.display = 'none';
+        div_questao5.style.display = 'none';
+        div_finalizar.style.display = 'none';
+    }
 
-        for (let index = 1; index <= 3; index++) {
+    function responder3() {
+        div_iniciar.style.display = 'none';
+        div_questao1.style.display = 'none';
+        div_questao2.style.display = 'none';
+        div_questao3.style.display = 'none';
+        div_questao4.style.display = 'flex';
+        div_questao5.style.display = 'none';
+        div_finalizar.style.display = 'none';
+    }
 
+
+    function responder4() {
+        div_iniciar.style.display = 'none';
+        div_questao1.style.display = 'none';
+        div_questao2.style.display = 'none';
+        div_questao3.style.display = 'none';
+        div_questao4.style.display = 'none';
+        div_questao5.style.display = 'flex';
+        div_finalizar.style.display = 'none';
+    }
+
+
+    function responder5() {
+        div_iniciar.style.display = 'none';
+        div_questao1.style.display = 'none';
+        div_questao2.style.display = 'none';
+        div_questao3.style.display = 'none';
+        div_questao4.style.display = 'none';
+        div_questao5.style.display = 'none';
+        div_finalizar.style.display = 'flex';
+    }
+
+    function finalizar() {
+        var pontos = 0;
+
+        if (document.getElementById("correta1").checked) {
+            pontos = pontos + 1;
         }
 
-        var resposta
-
-        for (var index = 0; index < array.length; index++) {
-            if (resposta == ListaRespostasCertas[index]) {
-
-            }
-
+        if (document.getElementById("correta2").checked) {
+            pontos = pontos + 1;
         }
+
+        if (document.getElementById("correta3").checked) {
+            pontos = pontos + 1;
+        }
+
+        if (document.getElementById("correta4").checked) {
+            pontos = pontos + 1;
+        }
+
+        if (document.getElementById("correta5").checked) {
+            pontos = pontos + 1;
+        }
+
+        alert(pontos);
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                pontosServer: pontos
+                // empresaServer: empresaVar
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+
+                    mensagem_erro.innerHTML =
+                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
 
     }
 </script>

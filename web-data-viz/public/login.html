@@ -116,6 +116,7 @@
 
             if (resposta.ok) {
                 console.log(resposta);
+                []
 
                 resposta.json().then(json => {
                     console.log(json);
@@ -123,7 +124,7 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
                         window.location = "home.html";
