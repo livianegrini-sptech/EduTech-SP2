@@ -56,7 +56,7 @@
                     • A partir de 1977, passou a ser chamada de SQL <br> <br>
 
                     • Query = consulta, em inglês</p>
-                <div id="div_erros_login"></div>
+                <div></div>
             </div>
 
             <div class="card card-login" style="padding: 20px 0px;">
@@ -71,7 +71,7 @@
                     Para isso, devemos selecionar o banco de dados
                     que queremos utilizar <br> <br>
                 </p>
-                <div id="div_erros_login"></div>
+                <div></div>
             </div>
             <div class="card card-login">
                 <h2>Selecionando um banco de dados (Schema)</h2>
@@ -79,7 +79,7 @@
 
                     • No MySQL Workbench, é possível selecionar o banco apenas dando <br>
                     um duplo clique com o mouse em cima do nome do banco na janela SCHEMAS <br></p>
-                <div id="div_erros_login"></div>
+                <div></div>
             </div>
 
             <div class="card card-login">
@@ -93,9 +93,65 @@
 
                     • No comando acima, é possível acrescentar restrições <br>
                     aos campos, como PRIMARY KEY, etc. <br></p>
-                <div id="div_erros_login"></div>
+                <div></div>
             </div>
 
+            <div class="card card-login">
+                <h2>Campos com valores caracteres</h2>
+                <p>• Campo com valores caracteres como o nome, o bairro e o<br>
+                    email podem ser definidos com o tipo CHAR ou VARCHAR<br><br>
+                    • Diferença entre CHAR e VARCHAR:<br><br>
+                    • Quando se define que o nome é CHAR(10), então todos os campos<br>
+                    desse tipo terão 10 caracteres, mesmo que o nome inserido tenha<br>
+                    menos do que 10 caracteres<br><br>
+                    • Ex: ‘Bruno’ será armazenado como ‘Bruno ‘<br>
+                    O campo nome terá 5 espaços em branco para completar 10 caracteres<br>
+                    • Quando se define que o nome é VARCHAR(10), então todos os<br>
+                    campos terão no máximo 10 caracteres. Se o nome inserido tiver<br>
+                    menos do que 10 caracteres, o campo conterá apenas os caracteres<br>
+                    inseridos<br><br>
+                    • Ex: ‘Bruno’ será armazenado como ‘Bruno’ <br></p>
+                <div></div>
+            </div>
+
+            <div class="card card-login">
+                <h2>Visualizando ou listando os dados da tabela</h2>
+                <p>•Comando:<br>
+                    SELECT * FROM nome-da-tabela; <br>
+                    * siginifica "todas as colunas"<br><br>
+
+                    • O comando acima exibe todos os dados de uma tabela<br><br>
+
+                    • Quando a tabela acabou de ser criada e ainda não tem<br>
+                    dados, o comando exibirá apenas os títulos das colunas<br>
+
+                </p>
+                <div></div>
+            </div>
+
+
+            <div class="card card-login">
+                <h2>Inserindo dados na tabela</h2>
+                <p>• Comando:<br>
+                    INSERT INTO nome-da-tabela<br>
+                    VALUES (dado-campo1, dado-campo2,..... dado-campoN);<br><br>
+                    • O comando acima vai inserir os dados dentro dos<br>
+                    parênteses na tabela, preenchendo um novo registro <br>
+                    (nova “linha”) na tabela<br><br>
+                    • A ordem que os dados devem aparecer dentro do<br>
+                    parênteses deve corresponder à ordem da criação dos<br>
+                    campos no comando CREATE TABLE <br></p>
+                <div></div>
+            </div>
+           
+            <div class="card card-login">
+                <h2>Visualizando os dados apenas de algumas linhas</h2>
+                <p>• Comando:<br>
+                    SELECT * FROM nome-da-tabela WHERE condição;<br><br>
+                    As linhas que satisfazem a condição (colocada após o WHERE)<br>
+                    são exibidas pelo comando. <br></p>
+                <div></div>
+            </div>
 
         </div>
     </div>

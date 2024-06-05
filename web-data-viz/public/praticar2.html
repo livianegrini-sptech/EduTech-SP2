@@ -40,7 +40,7 @@
     <div class="login">
         <div class="container">
             <div id="div_iniciar" class="card card-pratica">
-                <h2>Prática Conceitos e Primeiros Comandos</h2>
+                <h2>Prática Comandos DDL e DML</h2>
                 <div class="formulario">
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
@@ -59,26 +59,24 @@
             <!-- QUESTÃO 1 -->
             <div id="div_questao1" class="card card-pratica">
                 <div id="questao1" class="formulario">
-                    <h2>Qual o comando para criar uma tabela?</h2>
+                    <h2>Qual desses não é um tipos de SGBD?</h2>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input type="radio" name="resposta1">
-                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                        <p>Modelo hierárquico</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta1">
+                        <p>Modelo em rede</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input id="correta1" type="radio" name="resposta1">
-                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
-                            tipo-campo1, nome-campo2 tipo-campo2, <br>
-                            ....... nome-campoN tipo-campoN );</p>
-                    </div>
-
-                    <div class="campo">
-                        <!-- <span>E-mail:</span> -->
-                        <input type="radio" name="resposta1">
-                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                        <p>Modelo em campo</p>
                     </div>
                     <button onclick="responder1()">Responder</button>
                 </div>
@@ -88,29 +86,29 @@
             <!-- QUESTÃO 2 -->
             <div id="div_questao2" class="card card-pratica">
                 <div id="questao2" class="formulario">
-                    <h2>Qual o comando para criar um banco de dados (Schema)</h2>
+                    <h2>O que é DDL?</h2>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta2">
+                        <p>Grupo de instruções do SQL para manipular as<br>
+                            tabelas, ou seja, para inserir dados, atualizar os <br>
+                            dados, excluir dados, consultar dados</p>
+                    </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input id="correta2" type="radio" name="resposta2">
-                        <p>CREATE DATABASE nome-do-banco</p>
+                        <p>Grupo de instruções do SQL para criar tabelas,<br>
+                            alterar a estrutura das tabelas ou eliminar tabelas.<br>
+                            Ou instruções CREATE, ALTER, DROP.</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input type="radio" name="resposta2">
-                        <p>INSERT INTO nome-da-tabela<br>
-                            VALUES (dado-campo1,
-                            <br> dado-campo2,..... dado-campoN);</p>
-                    </div>
-
-                    <div class="campo">
-                        <!-- <span>E-mail:</span> -->
-                        <input type="radio" name="resposta2">
-                        <p>CREATE TABLE nome-da-tabela<br>
-                            ( nome-campo1 tipo-campo1, nome-campo2 <br>
-                            tipo-campo2, ....... nome-campoN <br>
-                             tipo-campoN );</p>
+                        <p>lidam principalmente com os direitos, permissões<br>
+                            e outros controles do sistema de banco de dados.</p>
                     </div>
                     <button onclick="responder2()">Responder</button>
                 </div>
@@ -120,25 +118,29 @@
             <!-- QUESTÃO 3 -->
             <div id="div_questao3" class="card card-pratica">
                 <div id="questao3" class="formulario">
-                    <h2>Qual o comando para inserir dados na tabela?</h2>
-
-                    <div class="campo">
-                        <!-- <span>E-mail:</span> -->
-                        <input type="radio" name="resposta3">
-                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
-                    </div>
-
-                    <div class="campo">
-                        <!-- <span>E-mail:</span> -->
-                        <input type="radio" name="resposta3">
-                        <p>SELECT * FROM nome-da-tabela;</p>
-                    </div>
+                    <h2>O que é DML?</h2>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input id="correta3" type="radio" name="resposta3">
-                        <p>INSERT INTO nome-da-tabela<br>
-                            VALUES (dado-campo1, dado-campo2,..... dado-campoN);</p>
+                        <p>Grupo de instruções do SQL para manipular as<br>
+                            tabelas, ou seja, para inserir dados, atualizar os <br>
+                            dados, excluir dados, consultar dados</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta3">
+                        <p>Grupo de instruções do SQL para criar tabelas,<br>
+                            alterar a estrutura das tabelas ou eliminar tabelas.<br>
+                            Ou instruções CREATE, ALTER, DROP.</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta3">
+                        <p>lidam principalmente com os direitos, permissões<br>
+                            e outros controles do sistema de banco de dados.</p>
                     </div>
                     <button onclick="responder3()">Responder</button>
                 </div>
@@ -148,25 +150,24 @@
             <!-- QUESTÃO 4 -->
             <div id="div_questao4" class="card card-pratica">
                 <div id="questao4" class="formulario">
-                    <h2>Qual o comando para selecionar um banco de dados (Schema)?</h2>
+                    <h2>Qual foi o primeiro modelo a ser reconhecido como um modelo de dados?</h2>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input type="radio" name="resposta4">
+                        <p>Modelo em Rede</p>
+                    </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input id="correta4" type="radio" name="resposta4">
-                        <p>USE nome-do-banco;</p>
+                        <p>Modelo Hierárquico</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input type="radio" name="resposta4">
-                        <p>SELECT * FROM nome-da-tabela;</p>
-                    </div>
-
-                    <div class="campo">
-                        <!-- <span>E-mail:</span> -->
-                        <input type="radio" name="resposta4">
-                        <p>ALTER TABLE Aluno<br>
-                             ADD COLUMN dtNasc DATE;</p>
+                        <p>Modelo Relacional</p>
                     </div>
                     <button onclick="responder4()">Responder</button>
                 </div>
@@ -176,32 +177,31 @@
             <!-- QUESTÃO 5 -->
             <div id="div_questao5" class="card card-pratica">
                 <div id="questao5" class="formulario">
-                    <h2>
-                        QUESTÃO 5</h2>
+                    <h2>A modelagem de dados <b>não</b> é uma técnica utilizada para:</h2>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input type="radio" name="resposta5">
-                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
-                    </div>
-
-                    <div class="campo">
-                        <!-- <span>E-mail:</span> -->
-                        <input id="correta5" type="radio" name="resposta5">
-                        <p>CREATE TABLE nome-da-tabela ( nome-campo1 <br>
-                            tipo-campo1, nome-campo2 tipo-campo2, <br>
-                            ....... nome-campoN tipo-campoN );</p>
+                        <p>Conhecer melhor o contexto de negócio</p>
                     </div>
 
                     <div class="campo">
                         <!-- <span>E-mail:</span> -->
                         <input type="radio" name="resposta5">
-                        <p>ALTER TABLE Aluno ADD COLUMN dtNasc DATE;</p>
+                        <p>Contribuir para que a perspectiva da organização a <br>
+                            respeito dos seus dados seja unificada</p>
+                    </div>
+
+                    <div class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <input  id="correta5"  type="radio" name="resposta5">
+                        <p>Fazer a documentação do projeto</p>
                     </div>
                     <button onclick="responder5()">Responder</button>
                 </div>
             </div>
 
+            <!-- Finalizar Quiz -->
             <div id="div_finalizar" class="card card-pratica">
                 <h2>Finalizar Quiz?</h2>
                 <div class="formulario">
@@ -210,6 +210,18 @@
                         <p>Pronto para saber seus pontos?</p>
                     </div>
                     <button onclick="finalizar()">Finalizar Quiz</button>
+                </div>
+            </div>
+
+            <!-- Potuação -->
+            <div id="div_exibirPontos" class="card card-pratica">
+                <h2>Seu total de pontos nessa prática foi:</h2>
+                <div class="formulario">
+                    <div id="div_exibir" class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <!-- <p>${pontos}</p> -->
+                    </div>
+                    <button onclick="voltar()">Voltar</button>
                 </div>
             </div>
 
@@ -238,6 +250,7 @@
     div_questao4.style.display = 'none';
     div_questao5.style.display = 'none';
     div_finalizar.style.display = 'none';
+    div_exibirPontos.style.display = 'none';
 
     // var ListaPerguntas = ['Qual o comando para criar uma tabela?'];
     // var ListaRespostas = ['ALTER TABLE Aluno ADD COLUMN dtNasc DATE;', 'CREATE TABLE nome-da-tabela ( nome-campo1 <br>tipo-campo1, nome-campo2 tipo-campo2, <br>....... nome-campoN tipo-campoN );', 'ALTER TABLE Aluno ADD COLUMN dtNasc DATE;'];
@@ -251,6 +264,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
     function responder1() {
@@ -261,6 +275,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
     function responder2() {
@@ -271,6 +286,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
     function responder3() {
@@ -281,6 +297,7 @@
         div_questao4.style.display = 'flex';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
 
@@ -292,6 +309,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'flex';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
 
@@ -303,6 +321,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'flex';
+        div_exibirPontos.style.display = 'none';
     }
 
     function finalizar() {
@@ -329,9 +348,13 @@
             pontos = pontos + 1;
         }
 
-        alert(pontos);
+        // alert(pontos);
 
-        window.location="home.html"
+        div_exibirPontos.style.display = 'flex';
+        div_finalizar.style.display = 'none';
+        div_exibir.innerHTML = `${pontos} pontos`
+
+        // window.location = "home.html"
 
         fetch(`/medidas/cadastrarPontos`, {
             method: "POST",
@@ -369,6 +392,9 @@
                 console.log(`#ERRO: ${resposta}`);
                 finalizarAguardar();
             });
+    }
 
+    function voltar() {
+        window.location = "home.html"
     }
 </script>

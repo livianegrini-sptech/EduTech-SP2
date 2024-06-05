@@ -242,7 +242,7 @@ body {
   /* background-image: url('../assets/imgs/FundoFormularios.jpg'); */
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoPrincipal.jpg');
   background-size: cover;
-  height: 200vh;
+  height: 500vh;
 }
 
 .login .container {
