@@ -101,7 +101,8 @@
                         <input type="radio" name="resposta2">
                         <p>INSERT INTO nome-da-tabela<br>
                             VALUES (dado-campo1,
-                            <br> dado-campo2,..... dado-campoN);</p>
+                            <br> dado-campo2,..... dado-campoN);
+                        </p>
                     </div>
 
                     <div class="campo">
@@ -110,7 +111,7 @@
                         <p>CREATE TABLE nome-da-tabela<br>
                             ( nome-campo1 tipo-campo1, nome-campo2 <br>
                             tipo-campo2, ....... nome-campoN <br>
-                             tipo-campoN );</p>
+                            tipo-campoN );</p>
                     </div>
                     <button onclick="responder2()">Responder</button>
                 </div>
@@ -166,7 +167,7 @@
                         <!-- <span>E-mail:</span> -->
                         <input type="radio" name="resposta4">
                         <p>ALTER TABLE Aluno<br>
-                             ADD COLUMN dtNasc DATE;</p>
+                            ADD COLUMN dtNasc DATE;</p>
                     </div>
                     <button onclick="responder4()">Responder</button>
                 </div>
@@ -202,6 +203,7 @@
                 </div>
             </div>
 
+             <!-- Finalizar Quiz -->
             <div id="div_finalizar" class="card card-pratica">
                 <h2>Finalizar Quiz?</h2>
                 <div class="formulario">
@@ -210,6 +212,18 @@
                         <p>Pronto para saber seus pontos?</p>
                     </div>
                     <button onclick="finalizar()">Finalizar Quiz</button>
+                </div>
+            </div>
+
+            <!-- Potuação -->
+            <div id="div_exibirPontos" class="card card-pratica">
+                <h2>Seu total de pontos nessa prática foi:</h2>
+                <div class="formulario">
+                    <div id="div_exibir" class="campo">
+                        <!-- <span>E-mail:</span> -->
+                        <!-- <p>${pontos}</p> -->
+                    </div>
+                    <button onclick="voltar()">Voltar</button>
                 </div>
             </div>
 
@@ -238,6 +252,7 @@
     div_questao4.style.display = 'none';
     div_questao5.style.display = 'none';
     div_finalizar.style.display = 'none';
+    div_exibirPontos.style.display = 'none';
 
     // var ListaPerguntas = ['Qual o comando para criar uma tabela?'];
     // var ListaRespostas = ['ALTER TABLE Aluno ADD COLUMN dtNasc DATE;', 'CREATE TABLE nome-da-tabela ( nome-campo1 <br>tipo-campo1, nome-campo2 tipo-campo2, <br>....... nome-campoN tipo-campoN );', 'ALTER TABLE Aluno ADD COLUMN dtNasc DATE;'];
@@ -251,6 +266,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
     function responder1() {
@@ -261,6 +277,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
     function responder2() {
@@ -271,6 +288,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
     function responder3() {
@@ -281,6 +299,7 @@
         div_questao4.style.display = 'flex';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
 
@@ -292,6 +311,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'flex';
         div_finalizar.style.display = 'none';
+        div_exibirPontos.style.display = 'none';
     }
 
 
@@ -303,6 +323,7 @@
         div_questao4.style.display = 'none';
         div_questao5.style.display = 'none';
         div_finalizar.style.display = 'flex';
+        div_exibirPontos.style.display = 'none';
     }
 
     function finalizar() {
@@ -329,9 +350,13 @@
             pontos = pontos + 1;
         }
 
-        alert(pontos);
+        // alert(pontos);
 
-        window.location="home.html"
+        // window.location="home.html"
+
+        div_exibirPontos.style.display = 'flex';
+        div_finalizar.style.display = 'none';
+        div_exibir.innerHTML = `${pontos} pontos`
 
         fetch(`/medidas/cadastrarPontos`, {
             method: "POST",
@@ -369,6 +394,9 @@
                 console.log(`#ERRO: ${resposta}`);
                 finalizarAguardar();
             });
+    }
 
+    function voltar() {
+        window.location = "home.html"
     }
 </script>

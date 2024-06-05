@@ -29,6 +29,7 @@ function buscarMedidasEmTempoReal(idAquario) {
     return database.executar(instrucaoSql);
 }
 
+// Para Primeiros Conceitos
 function cadastrarPontos(id, pontos) {
     console.log("ACESSEI O MEDIDA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():",id, pontos);
     
@@ -41,13 +42,14 @@ function cadastrarPontos(id, pontos) {
     return database.executar(instrucaoSql);
 }
 
+// Para DML e DQL
 function cadastrarPontos2(id, pontos) {
     console.log("ACESSEI O MEDIDA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():",id, pontos);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO pratica (fkConteudo, fkDisciplina, fkUsuario, pontuacao) VALUES (1,1,'${id}', '${pontos}');
+        INSERT INTO pratica (fkConteudo, fkDisciplina, fkUsuario, pontuacao) VALUES (2,1,'${id}', '${pontos}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
