@@ -18,4 +18,13 @@ router.post("/cadastrarPontos", function (req, res) {
 router.post("/cadastrarPontos2", function (req, res) {
     medidaController.cadastrarPontos2(req, res);
 })
+
+router.get("/quiz/", function (req, res) {
+    medidaController.listarPontos(req, res);
+});
+
+router.get("/quiz2/", function (req, res) {
+    medidaController.listarPontos2(req, res);
+});
+
 module.exports = router;

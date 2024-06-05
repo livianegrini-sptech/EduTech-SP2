@@ -117,9 +117,44 @@ function cadastrarPontos2(req, res) {
     }
 }
 
+function listarPontos(req, res) {
+
+    medidaModel.listarPontos()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhuma pontuação encontrada!");
+            }
+        })
+        .catch(function (erro) {
+            console.log("Houve um erro ao buscar as pontuações:", erro);
+            res.status(500).json({ error: "Erro ao buscar pontuações do quiz" });
+        });
+}
+
+function listarPontos2(req, res) {
+
+    medidaModel.listarPontos2()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhuma pontuação encontrada!");
+            }
+        })
+        .catch(function (erro) {
+            console.log("Houve um erro ao buscar as pontuações:", erro);
+            res.status(500).json({ error: "Erro ao buscar pontuações do quiz" });
+        });
+}
+
+
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     cadastrarPontos,
-    cadastrarPontos2
+    cadastrarPontos2,
+    listarPontos,
+    listarPontos2
 }

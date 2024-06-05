@@ -8,14 +8,12 @@
 
     <title>EduTech | Página Inicial</title>
 
-    <script src="./js/sessao.js"></script>
-
     <link rel="stylesheet" href="./css/dash.css">
     <link rel="icon" href="./assets/icon/favicon2.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<body>
+<body onload="obterDadosGrafico(), obterDadosGrafico2()">
     <div class="header">
         <div class="container">
             <h1 class="titulo">EduTech</h1>
@@ -23,7 +21,6 @@
                 <li class="agora">
                     <a href="home.html">Home</a>
                 </li>
-                <!-- <li>|</li> -->
                 <li>
                     <a href="home.html">Praticar</a>
                 </li>
@@ -41,8 +38,129 @@
     </div>
 
     <div class="social">
-        <!-- gráfico -->
+        <div class="graph-container">
+            <canvas id="myChartCanvas" class="canvas-container" style="width:735px; height:200px;"></canvas>
+        </div>
     </div>
+
+    <div class="social">
+        <div class="graph-container">
+            <canvas id="myChartCanvas2" class="canvas-container" style="width:735px; height:200px;"></canvas>
+        </div>
+    </div>
+
+    <!-- Inclua a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Inclua seu script de gráfico -->
+    <script>
+        let chartInstance1 = null;
+        let chartInstance2 = null;
+
+        function obterDadosGrafico() {
+            fetch(`/medidas/quiz/`, { cache: 'no-store' })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        console.log('Nenhum dado encontrado ou erro na API');
+                    }
+                })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+                    if (Array.isArray(resposta)) {
+                        var pontuacoes = resposta.map(item => item.pontuacao);
+                        plotarGrafico(pontuacoes);
+                    } else {
+                        throw new Error('Estrutura da resposta da API inesperada');
+                    }
+                })
+                .catch(function (error) {
+                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                });
+        }
+
+        function obterDadosGrafico2() {
+            fetch(`/medidas/quiz2/`, { cache: 'no-store' })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        console.log('Nenhum dado encontrado ou erro na API');
+                    }
+                })
+                .then(function (resposta) {
+                    console.log("Resposta da API:", resposta);
+                    if (Array.isArray(resposta)) {
+                        var pontuacoes2 = resposta.map(item => item.pontuacao);
+                        plotarGrafico2(pontuacoes2);
+                    } else {
+                        throw new Error('Estrutura da resposta da API inesperada');
+                    }
+                })
+                .catch(function (error) {
+                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                });
+        }
+
+        function plotarGrafico(pontos) {
+            var ctx = document.getElementById('myChartCanvas').getContext('2d');
+
+            if (chartInstance1 !== null) {
+                chartInstance1.destroy();
+            }
+
+            chartInstance1 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: pontos.map((_, index) => `Prática ${index + 1}`),
+                    datasets: [{
+                        label: 'Pontuação',
+                        data: pontos,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function plotarGrafico2(pontos2) {
+            var ctx2 = document.getElementById('myChartCanvas2').getContext('2d');
+
+            if (chartInstance2 !== null) {
+                chartInstance2.destroy();
+            }
+
+            chartInstance2 = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: pontos2.map((_, index) => `Prática ${index + 1}`),
+                    datasets: [{
+                        label: 'Pontuação',
+                        data: pontos2,
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

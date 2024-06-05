@@ -163,10 +163,25 @@ SELECT * FROM usuario;
 SELECT pratica.id as Pratica, pontuacao, dataPratica, disciplina.nome as Disciplina, conteudo.nome as Conteudo
 FROM pratica JOIN disciplina
 ON pratica.fkDisciplina = disciplina.id
-JOIN conteudo 
+JOIN conteudo 	
 ON pratica.fkConteudo = conteudo.id;
 
 -- INSERT INTO pratica (fkConteudo, fkDisciplina) VALUES
 -- (1,1);
 
 SELECT * FROM pratica;
+
+SELECT pratica.id as idPratica, pontuacao, conteudo.id as conteudo FROM pratica
+JOIN usuario
+ON pratica.fkUsuario = usuario.id 
+JOIN conteudo
+ON pratica.fkConteudo = conteudo.id 
+	WHERE usuario.id  = 1 AND conteudo.id = 1;
+    
+SELECT pratica.id as idPratica, pontuacao, conteudo.id as conteudo FROM pratica
+JOIN usuario
+ON pratica.fkUsuario = usuario.id 
+JOIN conteudo
+ON pratica.fkConteudo = conteudo.id 
+	WHERE usuario.id  = 1 AND conteudo.id = 2;
+

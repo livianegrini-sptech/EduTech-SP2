@@ -31,8 +31,8 @@ function buscarMedidasEmTempoReal(idAquario) {
 
 // Para Primeiros Conceitos
 function cadastrarPontos(id, pontos) {
-    console.log("ACESSEI O MEDIDA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():",id, pontos);
-    
+    console.log("ACESSEI O MEDIDA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", id, pontos);
+
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
@@ -44,8 +44,8 @@ function cadastrarPontos(id, pontos) {
 
 // Para DML e DQL
 function cadastrarPontos2(id, pontos) {
-    console.log("ACESSEI O MEDIDA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():",id, pontos);
-    
+    console.log("ACESSEI O MEDIDA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", id, pontos);
+
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
@@ -55,9 +55,42 @@ function cadastrarPontos2(id, pontos) {
     return database.executar(instrucaoSql);
 }
 
+
+function listarPontos() {
+    var instrucaoSql = `
+                   
+            SELECT pratica.id as Pratica, pontuacao, conteudo.id as conteudo FROM pratica
+            JOIN usuario
+            ON pratica.fkUsuario = usuario.id 
+            JOIN conteudo
+            ON pratica.fkConteudo = conteudo.id 
+            WHERE usuario.id  = 1 AND conteudo.id = 1;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+
+    return database.executar(instrucaoSql);
+}
+
+function listarPontos2() {
+    var instrucaoSql = `
+                   
+    SELECT pratica.id as Pratica, pontuacao, conteudo.id as conteudo FROM pratica
+    JOIN usuario
+    ON pratica.fkUsuario = usuario.id 
+    JOIN conteudo
+    ON pratica.fkConteudo = conteudo.id 
+        WHERE usuario.id  = 1 AND conteudo.id = 2;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     cadastrarPontos,
-    cadastrarPontos2
+    cadastrarPontos2,
+    listarPontos,
+    listarPontos2
 }
