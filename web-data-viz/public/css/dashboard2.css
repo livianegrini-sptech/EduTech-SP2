@@ -1,4 +1,283 @@
-.canvas-container{
-    width: 1000px;
-    height: 300px;
+.social{
+    width: 700px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.conteudo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoPrincipal.jpg');
+    background-size: cover;
+    height: 88.3vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+
+.julius-sans-one-regular {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+:root {
+    --tamanho-header: 75px;
+    --tamanho-banner: calc(80vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-footer: 65px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.TituloBanner {
+    font-size: 35px;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.header {
+    height: var(--tamanho-header);
+    /* border-bottom: 2px solid #32b9cd; */
+}
+
+.header .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: #018cc8;
+}
+
+.agora {
+    font-weight: 800;
+}
+
+.navbar {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #018cc8;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.titulo {
+    color: #018cc8;
+    width: fit-content;
+    font-weight: 500;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.Dados {
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.banner {
+    height: var(--tamanho-banner);
+    color: white;
+    /* background-image: url('../assets/imgs/FundoPrincipal.jpg'); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoHome.png');
+    background-size: cover;
+}
+
+.banner .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.banner .container p {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+}
+
+.banner .container span {
+    font-weight: 800;
+}
+
+/* .social {
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+} */
+
+.conteudoSocial {
+    flex-direction: column;
+}
+
+.social .container {
+    justify-content: center;
+}
+
+.conteudoApresentacao {
+    color: white;
+    width: 100%;
+    height: 22%;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.conteudoRevisao {
+    color: white;
+    width: 100%;
+    height: 40%;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.conteudoMetricas {
+    color: white;
+    background-color: #0C0C0C;
+    width: 100%;
+    height: 40%;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+
+.setas {
+    flex-direction: column;
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.setas img {
+    width: 200px;
+}
+
+.caixasMetricas {
+    width: 315px;
+    height: 120px;
+    background-color: #005C84;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.caixasMetricas a {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.conteudoSobreNos {
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.tituloApresentacao {
+    font-size: 40px;
+    margin-top: 60px;
+}
+
+.imagens img {
+    width: 500px;
+}
+
+.divisao_primeiraSecao img {
+    width: 85px;
+}
+
+.divisao_primeiraSecao {
+    width: 50%;
+}
+
+.divisao_primeiraSecao p {
+    font-size: 35px;
+}
+
+.divisao_primeiraSecao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+/* .social {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoPrincipal.jpg');
+    background-size: cover;
+} */
+
+.social p {
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+/* LOGIN */
+
+.login {
+    height: var(--tamanho-login);
+    /* background-image: url('../assets/imgs/FundoFormularios.jpg'); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/imgs/FundoFormularios.jpg');
+    background-size: cover;
+    height: 89vh;
+}
+
+.login .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    width: 50%;
+    background-color: black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px 0;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 30px;
+    font-family: "Julius Sans One", sans-serif;
 }
