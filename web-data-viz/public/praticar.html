@@ -11,7 +11,7 @@
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" href="./css/praticar.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <!-- <link rel="icon" href="./assets/icon/favicon2.ico"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
@@ -234,7 +234,7 @@
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
+            <h4>Feito por Lívia Negrini &hearts; SPTech &copy; 2024</h4>
             <span class="version">v1.0.0</span>
         </div>
     </div>
@@ -356,7 +356,9 @@
 
         div_exibirPontos.style.display = 'flex';
         div_finalizar.style.display = 'none';
-        div_exibir.innerHTML = `${pontos} pontos`
+
+        var porcentagem = (pontos / 5)*100;
+        div_exibir.innerHTML = `${pontos} pontos. Sua porcentagem de acertos foi: ${porcentagem}%`
 
         fetch(`/medidas/cadastrarPontos`, {
             method: "POST",

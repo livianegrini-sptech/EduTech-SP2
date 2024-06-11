@@ -264,6 +264,21 @@ body {
   padding: 20px 0;
 }
 
+.card2 {
+  width: 50%;
+  background-color: black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  flex-direction: column;
+  height: fit-content;
+  padding: 20px 0;
+  height: 30vh;
+}
+
+
 .card h2 {
   margin: 0;
   font-size: 20px;
